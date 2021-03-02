@@ -1,0 +1,42 @@
+<div class="container">
+
+<div class="jumbotron col-sm-12">
+    <h1 >Meu to do -list</h1>
+</div>
+
+<div  class="col-sm-10 " class="form-group">
+    <input type="text" class="form-control button"
+     placeholder="Informe um item" autocomplete="off" [(ngModel)]= "tarefa" >
+
+     <button class=" button btn btn-success btn-sm" (click)= adicionarTarefa()>
+        <span> 
+            <i class="material-icons">done</i>
+        </span>
+     </button>
+</div>
+
+<div>
+    <ul>
+        <li class="form-group" style="padding-right: 5px;" *ngFor="let item of array">{{item}}
+            <button  (click) ="removeTarefa(item)"><span>
+                <i class="material-icons">
+                   delete 
+                </i>
+            </span>
+
+
+               
+            </button>
+        
+        </li>
+    </ul>
+</div>
+
+         
+          
+                       
+        
+       
+    
+</div>
+<app-footer></app-footer>
